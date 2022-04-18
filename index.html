@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Geography</title>
+    <link rel="icon" href="./assets/images/logo.ico"/>
+
+    <link href="./assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/ol/css/ol.css" rel="stylesheet">
+    <link href="./assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="./assets/styles/index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="map"></div>
+
+    <div id="board">
+        <div id="board-left">
+            <label>
+                Longitude
+            </label>
+            <input type="text" id="longitude" class="form-control" readonly />
+
+            <label>
+                Latitude
+            </label>
+            <input type="text" id="latitude" class="form-control" readonly />
+
+            <label>
+                Name
+            </label>
+            <textarea id="display_name" class="form-control" rows="3" readonly></textarea>
+        </div>
+        <div id="board-right">
+            <label>
+                Local Time
+            </label>
+            <textarea type="text" id="timezone" class="form-control" rows="2" readonly></textarea>
+
+            <label>
+                Weather
+            </label>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td rowspan="2">
+                            <i class="fas fa-temperature-high" style="color: #dc3545;"></i> Temperature
+                        </td>
+                        <td>
+                            <i class="fas fa-gauge-simple-high"></i> <i>Measured</i>
+                        </td>
+                        <td id="temperature-measured">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-user-doctor"></i> <i>Feels like</i>
+                        </td>
+                        <td id="temperature-feels-like">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fas fa-tint" style="color: #0dcaf0;"></i> Humidity
+                        </td>
+                        <td id="humidity">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fas fa-arrows-to-circle" style="color: #198754;"></i> Pressure
+                        </td>
+                        <td id="pressure">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">
+                            <i class="fas fa-wind" style="color: #0d6efd;"></i> Wind
+                        </td>
+                        <td>
+                            <i class="fas fa-fan"></i> <i>Speed</i>
+                        </td>
+                        <td id="wind-speed">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-location-arrow"></i> <i>Direction</i>
+                        </td>
+                        <td id="wind-direction">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-hurricane"></i> <i>Gust</i>
+                        </td>
+                        <td id="wind-gust">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fas fa-cloud" style="color: #6c757d;"></i> Clouds
+                        </td>
+                        <td id="clouds">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fas fa-x-ray" style="color: #6610f2;"></i> UV Index
+                        </td>
+                        <td id="uv-index">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <i class="fas fa-glasses" style="color: #fd7e14;"></i> Foresight
+                        </td>
+                        <td id="visibility">
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/jquery.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/ol/js/ol.js"></script>
+    <script src="./assets/scripts/moment.js"></script>
+    <script src="./assets/scripts/moment-timezone.js"></script>
+    <script src="./assets/scripts/index.js"></script>
+</body>
+</html>

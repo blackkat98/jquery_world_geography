@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+  
+#map {
+    position: relative;
+    top: 10px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#board {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 10px 40px 10px;
+}
+  
+#board > #board-left, #board > #board-right {
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+  
+#board-left > input, #board-right > input, #board-left > textarea, #board-right > textarea {
+    width: 100%;
+    margin: 0 0 10px 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    resize: none;
+}
+
+#board-right > table {
+    width: 100%;
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+
+#board-right > table > tbody > tr > td {
+    display: table-cell;
+    width: 33.33%;
+    vertical-align: middle;
+}
+  
+@media screen and (max-width: 600px) {
+    #map {
+        width: 96%;
+        left: 2%;
+        height: 55vh;
+    }
+
+    #board {
+        display: block;
+    }
+  
+    #board > #board-left, #board > #board-right {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+}
+  
+@media screen and (min-width: 601px) {
+    #map {
+        width: 90%;
+        left: 5%;
+        height: 48vh;
+    }
+
+    #board {
+        display: flex;
+    }
+  
+    #board > #board-left {
+        width: 40%;
+        padding: 0 10px 0 50px;
+    }
+  
+    #board > #board-right {
+        width: 60%;
+        padding: 0 50px 0 10px;
+    }
+}
